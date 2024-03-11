@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "titulo titulo"
+    "imagen indice";  
+}
+
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.imagen{
+    justify-self: end;
+}
+img{
+    width:100vh;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    
+}
+
+a:hover{
+    background: #F3AF46;
+}
+
+.listas{
+    margin-top: 10px;
+    margin-left: 30px;
+    line-height: 40px;
+    font-size: 28px;
+
+}
+

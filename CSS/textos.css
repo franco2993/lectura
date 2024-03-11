@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor-1{
+    display: flex;
+    height: 100vh;
+    background-color:#DBF9FF;
+    white-space: nowrap; /* Para que el texto no se divida en varias líneas */  
+    overflow: hidden; /* Para ocultar el texto que se desborda */
+    align-items: center;
+}
+.textoVeloz{   /* Estilo del texto que se desplaza horizontalmente */
+    font-size: 140px;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: desplazar 60s linear; /* Animación para el desplazamiento */
+}
+/* Keyframes para la animación */
+@keyframes desplazar {
+    0% {
+        transform: translateX(5%); /* Empieza fuera del contenedor hacia la derecha */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fuera del contenedor hacia la izquierda */
+    }
+}
+/* ------------------ SEGUNDA PARTE ----------------- */
+.contenedor-2{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 100vh;
+    grid-template-areas: "titulo titulo"
+                         "preguntas preguntas"
+                         "boton palabras" 
+    ;
+    display: none;
+}
+
+.titulo{
+    grid-area:titulo;
+    text-align: center;
+    font-size: 30px;
+    background-color: #87CEFA;
+    border-radius: 50px;
+    width: 1000px;
+    justify-self: center;
+}
+.preguntas{
+    grid-area: preguntas;
+    margin-left: 40px;
+}
+li{
+    font-size: 30px;
+    margin-left: 100px;
+}
+.contador{
+    display:grid;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #87CEFA;
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    justify-self: center;
+}
+.botonRespuesta{
+    grid-area: boton;
+    align-self: center;
+    margin-left: 100px;
+}
+#boton{
+    background-color: #87CEFA;
+    border-radius:50px;
+    border:none;
+    height: 70px;
+    width: 280px;
+    font-size: 30px;
+    font-family:Georgia;
+    font-weight: bolder;
+}
+.respuestaCorrecta {  /* estilo de respuesta al hacer click*/
+    font-weight: bold;
+    color: red;
+}
